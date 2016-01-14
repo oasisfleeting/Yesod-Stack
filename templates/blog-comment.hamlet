@@ -1,0 +1,17 @@
+<div .comment reply-url=@{BlogReplyR (Just commentId)}>
+  $maybe title <- commentTitle comment
+    <div>
+       <h4 .commentTitle>#{title}
+  <div .commentDetails>
+    <span>
+      $maybe user <- commentUser comment
+        by #{userIdent user} _{MsgPostedOn} #{showTime $ commentCreation comment}:
+      $nothing
+        by _{MsgAnonymousCoward} _{MsgPostedOn} #{showTime $ commentCreation comment}:
+  <div .commentContents>
+    <div .commentBody>
+      ^{commentContents comment}
+    <div .commentSub>
+      <a href=# .reply>Reply
+
+

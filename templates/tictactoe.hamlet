@@ -1,0 +1,27 @@
+
+<ul .playerMenu>
+  <li>
+    <a href="#" #xplayer>
+      <span>
+        _{MsgPlayer} X:
+        <span #xplayerdisp>
+    <ul>
+      <li>
+        <a href="#" .menuItem side="X" player="computer">_{MsgComputer}
+      <li>
+        <a href="#" .menuItem side="X" player="human">_{MsgHuman}
+  <li>
+    <a href="#" #oplayer>
+      <span>
+        _{MsgPlayer} O:
+        <span #oplayerdisp>
+    <ul>
+      <li>
+        <a href="#" .menuItem side="O" player="computer">_{MsgComputer}
+      <li>
+        <a href="#" .menuItem side="O" player="human">_{MsgHuman}
+
+<div #game>
+  <canvas #canvas width=#{canvasSize} height=#{canvasSize}>
+
+

@@ -1,0 +1,17 @@
+<h1>_{MsgWebring}
+<br>
+<ul>
+  $forall Entity id site <- sites
+    <li>
+      <b>#{T.take 80 $ siteOwner site}
+      _{MsgHasWebsiteAt} #
+      $if Network.URI.isAbsoluteURI $ T.unpack $ siteUrl site
+        <a href=#{siteUrl site} rel="noreferrer">#{T.take 200 $ siteUrl site}
+      $else
+        <a href=#{T.append (T.pack "http://") (siteUrl site)} rel="noreferrer">#{T.take 200 $ siteUrl site}
+
+<h1>_{MsgAddYourSite}
+<form method=post action=@{RingR}#form enctype=#{formEnctype}>
+  ^{formWidget}
+  <input type="submit" value=_{MsgSubmit}>
+

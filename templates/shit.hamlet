@@ -1,0 +1,17 @@
+<h1>_{MsgShitPeopleHavePosted}
+<br>
+<h1>_{MsgPostSomeShit}
+<form method=post action=@{ShitR}#form enctype=#{formEnctype}>
+  ^{formWidget}
+  <input type="submit" value=_{MsgSubmit}>
+<br>
+<ul>
+  $forall Entity id post <- shits
+    <li>
+      <span>
+        <b>#{T.take 80 $ postAuthor post}</b>
+        _{MsgSaidOn} #{show $ postCreation post}:
+      <div .textarea>
+        <p>#{T.take 240 $ unTextarea $ postContents post}
+
+

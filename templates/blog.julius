@@ -1,0 +1,27 @@
+'use strict';
+
+$(document).ready(function() {
+	var openedReplyUrl = null;
+	var openedReplyComment = null;
+	$('.comment').each(function (index, commentElement) {
+		$(commentElement).find('.reply').click(function (e) {
+			var replyUrl = $(commentElement).attr('reply-url');
+			if(openedReplyUrl == replyUrl) {
+				return;
+			}
+			if(openedReplyUrl != null) {
+				$(openedReplyComment).find('#commentForm').remove();
+			}
+			$.ajax({
+				url: replyUrl,
+				context: document.body
+			}).done(function (html) {
+				$(commentElement).append(html);
+				openedReplyComment = commentElement;
+				openedReplyUrl = replyUrl;
+			});
+			e.preventDefault();
+		});
+	});
+})
+

@@ -1,0 +1,25 @@
+User
+    ident Text
+    password Text Maybe
+    UniqueUser ident
+    deriving Typeable
+    deriving Show
+
+Post
+    author Text
+    contents Textarea
+    creation UTCTime default=now()
+
+Site
+    owner Text
+    url Text
+    UniqueSite owner url
+
+Comment
+    parent CommentId Maybe
+    title Text Maybe
+    user User Maybe
+    contents Html
+    creation UTCTime default=now()
+
+-- By default this file is used in Model.hs (which is imported by Foundation.hs)

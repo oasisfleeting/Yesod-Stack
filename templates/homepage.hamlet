@@ -1,0 +1,15 @@
+<h1>_{MsgMySite}
+
+_{MsgThisMySite}
+
+<ul>
+  <li>
+    <a href=@{BlogR Nothing}>_{MsgBlog}
+  <li>
+    <a href=@{RingR}>_{MsgWebring}
+  <li>
+    <a href=@{TicTacToeR}>_{MsgTicTacToe}
+  <li>
+    <a href=@{ShitR}>_{MsgGuestbook}
+
+

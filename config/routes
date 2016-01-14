@@ -1,0 +1,14 @@
+/static StaticR Static getStatic
+/auth   AuthR   Auth   getAuth
+
+/favicon.ico FaviconR GET
+/robots.txt RobotsR GET
+
+/ HomeR GET
+/echo/#String EchoR GET
+/fizzbuzz/#Int FizzBuzzR GET
+/shit ShitR GET POST
+/ring RingR GET POST
+/tictactoe TicTacToeR GET
+/blog/#Maybe-CommentId BlogR GET POST
+/blog/reply/#Maybe-CommentId BlogReplyR GET

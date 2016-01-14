@@ -1,0 +1,43 @@
+
+section
+  clear: both
+
+h4.commentTitle
+  display: block
+  color: white
+  border-radius: 10px 0 0 0
+  -moz-border-radius: 10px 0 0 0
+  -webkit-border-radius: 10px 0 0 0
+  -o-border-radius: 10px 0 0 0
+  background-color: hsl(180, 100%, 13%)
+  padding: 4px 20px 4px 20px
+
+li.comment
+  border-color: hsl(0, 0%, 78%)
+  border-width: 1px
+  border-style: solid
+
+  list-style-type: none
+  list-style-position: outside
+
+  border-radius: 10px 0 0 0
+  -moz-border-radius: 10px 0 0 0
+  -webkit-border-radius: 10px 0 0 0
+  -o-border-radius: 10px 0 0 0
+  left: -3px
+  position: relative
+
+section.comment
+  position: relative
+  vertical-align: baseline
+
+.commentDetails
+  background-color: hsl(0, 0%, 88%)
+  color: hsl(0, 0%, 30%)
+  display: block
+
+.commentContents
+  padding: 20px 20px 0 20px
+
+.commentSub
+  padding: 0 20px 0 20px

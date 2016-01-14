@@ -1,0 +1,5 @@
+
+<ul>
+  $forall i <- workset
+    <li>#{fizzbuzz fb i}
+

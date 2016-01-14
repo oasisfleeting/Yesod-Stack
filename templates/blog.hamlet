@@ -1,0 +1,20 @@
+<section>
+  $maybe userId' <- user
+    <span>You are logged in as #{show $ userIdent userId'}
+    <a href=@{AuthR LogoutR}>Logout
+  $nothing
+    <a href=@{AuthR LoginR}>Login
+$#  <a href=@{newAccountR}>Sign-up
+
+<section .comment>
+  <h1>_{MsgBlog}
+  ^{renderCommentForest commentTrees}
+
+$maybe (formWidget,formEnctype) <- formItems
+  <section>
+    <h1>_{MsgPostBlogEntry}
+    <form #commentForm method=post action=@{BlogR Nothing}#form enctype=#{formEnctype}>
+      ^{formWidget}
+      <input type="submit" value="Submit">
+
+
